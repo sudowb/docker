@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Install necessary packages
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install qemu-kvm xz-utils dbus-x11 curl firefox gnome-system-monitor mate-system-monitor git xfce4 xfce4-terminal tightvncserver wget openssh-server -y
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install qemu-kvm xz-utils dbus-x11 curl firefox gnome-system-monitor mate-system-monitor git xfce4 xfce4-terminal tightvncserver wget openssh-server iputils-ping net-tools -y
 
 # Download and install noVNC
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz && tar -xvf v1.2.0.tar.gz
